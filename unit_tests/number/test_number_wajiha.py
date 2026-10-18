@@ -28,6 +28,7 @@ def load_csv(name):
     pytest.param(-1000, "-1,000", id="IC-02"),
     pytest.param(0, "0", id="IC-03"),
 ])
+@pytest.mark.order(1)
 def test_intcomma_ecp_integers(value, expected):
     assert humanize.intcomma(value) == expected
 
@@ -96,6 +97,7 @@ def test_intcomma_from_csv(value, expected):
     pytest.param(2, "2nd", id="OR-01b"),
     pytest.param(3, "3rd", id="OR-01c"),
 ])
+@pytest.mark.order(2)
 def test_ordinal_ecp_one_two_three(value, expected):
     assert humanize.ordinal(value) == expected
 
@@ -177,6 +179,7 @@ def test_ordinal_from_csv(value, expected):
     pytest.param(5, "five", id="AP-01b"),
     pytest.param(9, "nine", id="AP-01c"),
 ])
+@pytest.mark.order(3)
 def test_apnumber_ecp_single_digit_as_word(value, expected):
     assert humanize.apnumber(value) == expected
 
@@ -268,6 +271,7 @@ def test_module_intcomma_round_trip_keeps_the_digits():
 
 
 @pytest.mark.module
+@pytest.mark.order(-1)
 def test_module_functions_agree_on_small_numbers():
     # For 1 to 9, intcomma gives digits while apnumber gives words.
     for n in range(1, 10):
