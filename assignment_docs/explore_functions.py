@@ -1,5 +1,4 @@
-"""Run each humanize function with sample inputs and print the real output.
-Use this to decide the expected results for our ECP and BVA notes."""
+
 import datetime
 import humanize
 
