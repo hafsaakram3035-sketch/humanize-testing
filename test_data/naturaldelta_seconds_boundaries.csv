@@ -1,0 +1,9 @@
+input,expected
+59,59 seconds
+60,a minute
+119,a minute
+120,2 minutes
+3599,59 minutes
+3600,an hour
+86399,23 hours
+86400,a day
