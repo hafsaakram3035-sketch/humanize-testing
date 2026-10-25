@@ -1,0 +1,7 @@
+input,expected
+172800,2 days
+2592000,30 days
+2678400,a month
+31536000,a year
+31622400,"1 year, 1 day"
+63072000,2 years
